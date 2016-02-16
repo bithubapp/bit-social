@@ -1,0 +1,57 @@
+{
+  "name": "bit-social",
+  "version": "0.0.0",
+  "description": "social network sharing widget",
+  "homepage": "https://github.com/bithubapp/bit-social",
+  "author": {
+    "name": "Nils Lundquist",
+    "email": "nils@bitovi.com",
+    "url": ""
+  },
+  "scripts": {
+    "test": "npm run jshint && npm run testee",
+    "build": "node build.js",
+    "document": "documentjs",
+    "jshint": "jshint src/. --config",
+    "testee": "testee src/test/test.html --browsers chrome",
+    "preversion": "npm test && npm run build",
+    "version": "git commit -am \"Update dist for release\" && git checkout -b release && git add -f dist/",
+    "postversion": "git push --tags && git checkout master && git branch -D release && git push",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
+  },
+  "main": "src/bit-social",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "widget",
+    "donejs",
+    "social",
+    "share"
+  ],
+  "system": {
+    "directories": {
+      "lib": "src"
+    },
+    "npmIgnore": [
+      "documentjs",
+      "testee"
+    ],
+    "npmAlgorithm": "flat"
+  },
+  "dependencies": {
+    "steal": "^0.14.0-pre.8",
+    "can": "^2.3.0",
+    "jquery": "2.1.4"
+  },
+  "devDependencies": {
+    "documentjs": "^0.4.1",
+    "font-awesome": "^4.5.0",
+    "jshint": "^2.9.1",
+    "steal-qunit": "^0.1.1",
+    "steal-tools": "^0.14.0-pre.1",
+    "testee": "^0.2.4"
+  }
+}

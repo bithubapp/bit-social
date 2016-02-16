@@ -1,0 +1,7 @@
+<a class="twitter" data-network="twitter"><i class="fa fa-twitter"></i></a>
+<a class="facebook" data-network="facebook"><i class="fa fa-facebook"></i></a>
+{{#showPinterest}}<a class="pinterest" data-network="pinterest"><i class="fa fa-pinterest"></i></a>{{/showPinterest}}
+<a class="google-plus" data-network="googleplus"><i class="fa fa-google-plus"></i></a>
+<a class="linkedin" data-network="linkedin"><i class="fa fa-linkedin"></i></a>
+<a class="delicious" data-network="delicious"><i class="fa fa-delicious"></i></a>
+<a class="stumbleupon" data-network="stumbleupon"><i class="fa fa-stumbleupon"></i></a>
