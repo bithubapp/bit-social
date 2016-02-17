@@ -3,13 +3,13 @@
 An example DoneJS component that renders page sharing links to multiple social networks.
 
 Links to:
-	- Facebook
-	- Twitter
-	- Google Plus
-	- Pinterest
-	- Delicious
-	- Stumbleupon
-	- LinkedIn
+- Facebook
+- Twitter
+- Google Plus
+- Pinterest
+- Delicious
+- Stumbleupon
+- LinkedIn
 
 # bit-social
 
