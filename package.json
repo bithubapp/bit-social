@@ -6,7 +6,7 @@
   "author": {
     "name": "Nils Lundquist",
     "email": "nils@bitovi.com",
-    "url": ""
+    "link": ""
   },
   "scripts": {
     "test": "npm run jshint && npm run testee",
@@ -32,6 +32,9 @@
     "share"
   ],
   "system": {
+    "map": {
+      "faker": "faker/build/build/faker"
+    },
     "directories": {
       "lib": "src"
     },
@@ -42,16 +45,20 @@
     "npmAlgorithm": "flat"
   },
   "dependencies": {
-    "steal": "^0.14.0-pre.8",
     "can": "^2.3.0",
-    "jquery": "2.1.4"
+    "jquery": "2.1.4",
+    "lodash": "^4.4.0",
+    "steal": "^0.14.0-pre.8"
   },
   "devDependencies": {
     "documentjs": "^0.4.1",
+    "faker": "^3.0.1",
     "font-awesome": "^4.5.0",
     "jshint": "^2.9.1",
+    "sinon": "^1.17.3",
     "steal-qunit": "^0.1.1",
     "steal-tools": "^0.14.0-pre.1",
-    "testee": "^0.2.4"
+    "testee": "^0.2.4",
+    "valid-url": "^1.0.9"
   }
 }

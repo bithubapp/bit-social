@@ -2,16 +2,16 @@
 
 [![Build Status](https://travis-ci.org/bithubapp/bit-social.png?branch=master)](https://travis-ci.org/bithubapp/bit-social)
 
-social network sharing widget
+DoneJS social network sharing widget. See src/bit-social.md for API details.
 
 ## Usage
 
 ### ES6 use
 
-With StealJS, you can import this module directly in a template that is autorendered:
+Using StealJS, you can import this module directly in a template that is autorendered:
 
 ```js
-import plugin from 'bit-social';
+import BitSocial from 'bit-social';
 ```
 
 ### CommonJS use
@@ -20,7 +20,7 @@ Use `require` to load `bit-social` and everything else
 needed to create a template that uses `bit-social`:
 
 ```js
-var plugin = require("bit-social");
+var BitSocial = require("bit-social");
 ```
 
 ## AMD use

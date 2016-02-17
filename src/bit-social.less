@@ -1,9 +1,23 @@
 bit-social {  
 	display: flex;
+	background: #eee;
 	
 	> * {
 		flex-grow: 1;
 		flex-basis: 0;
-		text-align: center;
+		
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		
+		min-height: 32px;
+		border-radius: 3px;
+		
+		cursor: pointer;
+
+		&:hover {
+			background: #428bca;
+			color: white;
+		}
 	} 
 }
