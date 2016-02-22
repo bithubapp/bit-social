@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bit Social Demo</title>
+
+    <script src="/node_modules/steal/steal.js" data-main="can/view/autorender/"></script>
+</head>
+<body>
+<script type="text/stache" id="main" can-autorender>
+	<can-import from="bit-social" />
+	<can-import from="font-awesome/less/font-awesome.less!" />
+	<can-import from="src/demo-data" />
+
+	<div id="examples">
+		{{#each data}}
+			<bit-social url='{url}' text='{text}' image='{image}' />
+		{{/each}}
+	</div>
+</script>
+</body>
+</html>

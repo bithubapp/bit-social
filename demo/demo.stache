@@ -1,3 +1,0 @@
-{{#each data}}
-    <bit-social url='{url}' text='{text}' image='{image}' />
-{{/each}}

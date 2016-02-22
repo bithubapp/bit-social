@@ -19,9 +19,10 @@
     "postversion": "git push --tags && git checkout master && git branch -D release && git push",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
-    "release:major": "npm version major && npm publish"
+    "release:major": "npm version major && npm publish",
+	"develop": "can-serve --static --develop --port 8080"
   },
-  "main": "src/bit-social",
+  "main": "bit-social",
   "files": [
     "src"
   ],
@@ -46,17 +47,18 @@
   },
   "dependencies": {
     "can": "^2.3.0",
-    "jquery": "2.1.4",
-    "lodash": "^4.4.0",
-    "steal": "^0.14.0-pre.8"
+    "jquery": "2.1.4"
   },
   "devDependencies": {
+	"can-ssr": "^0.11.6",
     "documentjs": "^0.4.1",
-    "faker": "^3.0.1",
+	"donejs-cli": "^0.6.0",
+	"faker": "^3.0.1",
     "font-awesome": "^4.5.0",
     "jshint": "^2.9.1",
     "sinon": "^1.17.3",
-    "steal-qunit": "^0.1.1",
+	"steal": "^0.14.0-pre.8",
+	"steal-qunit": "^0.1.1",
     "steal-tools": "^0.14.0-pre.1",
     "testee": "^0.2.4",
     "valid-url": "^1.0.9"

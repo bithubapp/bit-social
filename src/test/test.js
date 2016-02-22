@@ -4,7 +4,7 @@ import plugin from '../bit-social';
 import faker from 'faker';
 import sinon from 'sinon';
 import validUrl from 'valid-url';
-import data from 'demo/data';
+import data from '../demo-data';
 
 var windowOpen;
 

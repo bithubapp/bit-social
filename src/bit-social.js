@@ -1,5 +1,4 @@
 import can from "can";
-import _ from "lodash";
 import template from "./bit-social.stache";
 import "./bit-social.less";
 
@@ -14,13 +13,16 @@ var URL_TEMPLATES = {
 };
 
 function encodeArgs(args) {
-	// omit undefined args from argument object 
-	args = _.omitBy(args, function(v) {return v === undefined;});
+	var ret = {};
 	
-	// escape args for query string
-	return _.mapValues(args, function(arg) {
-		return !!arg ? encodeURIComponent(arg) : arg;
+	Object.keys(args).forEach(function(k) {
+		// omit undefined args from argument object & escape args for query string
+		if (args[k] !== undefined) {
+			ret[k] = encodeURIComponent(args[k]);
+		}
 	});
+	
+	return ret;
 }
 
 // format url template
