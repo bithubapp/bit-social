@@ -1,6 +1,6 @@
 {
   "name": "bit-social",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "social network sharing widget",
   "homepage": "https://github.com/bithubapp/bit-social",
   "author": {
@@ -9,57 +9,69 @@
     "link": ""
   },
   "scripts": {
-    "test": "npm run jshint && npm run testee",
-    "build": "node build.js",
-    "document": "documentjs",
-    "jshint": "jshint src/. --config",
-    "testee": "testee src/test/test.html --browsers chrome",
     "preversion": "npm test && npm run build",
     "version": "git commit -am \"Update dist for release\" && git checkout -b release && git add -f dist/",
     "postversion": "git push --tags && git checkout master && git branch -D release && git push",
+    "testee": "testee src/test/test.html --browsers firefox",
+    "test": "npm run jshint && npm run testee",
+    "jshint": "jshint src/. --config",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
-	"develop": "can-serve --static --develop --port 8080"
+    "build": "node build.js",
+    "document": "documentjs",
+    "develop": "can-serve --static --develop --port 8080"
   },
-  "main": "bit-social",
-  "files": [
-    "src"
-  ],
+  "main": "dist/cjs/bit-social",
+  "browser": {
+    "transform": [
+      "cssify"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "cssify"
+    ]
+  },
   "keywords": [
-    "widget",
-    "donejs",
-    "social",
-    "share"
+	"widget",
+	"donejs",
+	"social",
+	"share"
   ],
   "system": {
-    "map": {
-      "faker": "faker/build/build/faker"
-    },
+    "main": "bit-social",
     "directories": {
       "lib": "src"
     },
+    "configDependencies": [
+      "live-reload"
+    ],
     "npmIgnore": [
       "documentjs",
-      "testee"
+      "testee",
+      "generator-donejs",
+      "donejs-cli",
+      "steal-tools"
     ],
     "npmAlgorithm": "flat"
   },
   "dependencies": {
-    "can": "^2.3.0",
-    "jquery": "2.1.4"
+    "can": "^2.3.20",
+    "font-awesome": "^4.5.0",
+    "jquery": "~2.2.1"
   },
   "devDependencies": {
-	"can-ssr": "^0.11.6",
-    "documentjs": "^0.4.1",
-	"donejs-cli": "^0.6.0",
-	"faker": "^3.0.1",
-    "font-awesome": "^4.5.0",
+    "cssify": "^0.6.0",
+    "documentjs": "^0.4.2",
+    "donejs-cli": "^0.7.0",
+    "faker": "^3.0.1",
+    "generator-donejs": "^0.7.0",
     "jshint": "^2.9.1",
     "sinon": "^1.17.3",
-	"steal": "^0.14.0-pre.8",
-	"steal-qunit": "^0.1.1",
-    "steal-tools": "^0.14.0-pre.1",
+    "steal": "^0.15.0",
+    "steal-qunit": "^0.1.1",
+    "steal-tools": "^0.14.0",
     "testee": "^0.2.4",
     "valid-url": "^1.0.9"
   }

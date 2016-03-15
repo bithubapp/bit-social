@@ -1,10 +1,9 @@
-import faker from 'faker'; 
-import _ from 'lodash';
+import faker from 'faker';
 
-export default _.range(9).map(function() {
+export default new Array(10).fill(0).map(function() {
 	return {
 		text: faker.lorem.sentence(),
 		url: faker.internet.url(),
 		image: faker.image.imageUrl()
 	};
-})
+});
