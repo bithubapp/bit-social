@@ -1,0 +1,19 @@
+/*bit-social@1.0.0#bit-social.less!$less*/
+bit-social {
+  display: flex;
+  background: #eee;
+}
+bit-social > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 32px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+bit-social > *:hover {
+  background: #428bca;
+  color: white;
+}
